@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "projectm": {
+    "trello": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/projectm",
+            "outputPath": "dist/trello",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "projectm:build:production"
+              "buildTarget": "trello:build:production"
             },
             "development": {
-              "buildTarget": "projectm:build:development"
+              "buildTarget": "trello:build:development"
             }
           },
           "defaultConfiguration": "development"
