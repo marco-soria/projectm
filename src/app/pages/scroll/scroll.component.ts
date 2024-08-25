@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { NavbarComponent } from '../../components/navbar/navbar.component';
 import { CommonModule } from '@angular/common';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 interface Product {
   id: string;
@@ -13,7 +14,7 @@ interface Product {
 @Component({
   selector: 'app-scroll',
   standalone: true,
-  imports: [NavbarComponent, CommonModule],
+  imports: [NavbarComponent, CommonModule, ScrollingModule],
   templateUrl: './scroll.component.html'
 })
 export class ScrollComponent {
