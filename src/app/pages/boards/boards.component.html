@@ -60,11 +60,11 @@
     <cdk-accordion>
       @for (item of items; track item.label) {
         <cdk-accordion-item #accordionItem="cdkAccordionItem">
-        <button class=" w-full text-left" type="button" (click)="accordionItem.toggle()"> {{item.label}} </button>
+        <button class="w-full py-1 px-2 flex justify-between items-center" type="button" (click)="accordionItem.toggle()">{{ item.label }}</button>
         <div [style.display]="accordionItem.expanded ? '' : 'none' ">
           <ul>
            @for (subItem of item.items; track subItem.label) {
-              <li>{{subItem.label}}</li>
+              <li class="ml-4">{{subItem.label}}</li>
             }
           </ul>
         </div>
