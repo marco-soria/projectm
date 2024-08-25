@@ -24,24 +24,34 @@
       </div>
     </div>
     <div class="flex items-center">
-      <button
-        type="button"
-        class="flex rounded-full"
-        aria-expanded="false"
-        type="button"
-        (click)="isOpen = !isOpen"
-        cdkOverlayOrigin
-        #menuOverlay="cdkOverlayOrigin"
-      >
-        <img
-          class="w-8 h-8 rounded-full"
-          src="https://api.lorem.space/image/face?w=400&h=400"
-          alt="user photo"
-        />
-      </button>
+      <div class="flex space-x-2">
+        <button class="text-white" type="button">
+          <fa-icon [icon]="faBell"></fa-icon>
+        </button>
+        <button class="text-white" type="button">
+          <fa-icon [icon]="faInfoCircle"></fa-icon>
+        </button>
+        <button
+          type="button"
+          class="flex rounded-full"
+          aria-expanded="false"
+          type="button"
+          (click)="isOpen = !isOpen"
+          cdkOverlayOrigin
+          #menuOverlay="cdkOverlayOrigin"
+        >
+          <img
+            class="w-8 h-8 rounded-full"
+            src="https://api.lorem.space/image/face?w=400&h=400"
+            alt="user photo"
+          />
+        </button>
+      </div>
     </div>
   </div>
 </nav>
+
+
 <ng-template
   cdkConnectedOverlay
   [cdkConnectedOverlayOrigin]="menuOverlay"
@@ -53,7 +63,7 @@
     <div class="py-3 px-4 flex justify-between">
       <span class="block text-sm text-center text-gray-900">Account</span>
       <button (click)="isOpen = !isOpen" class="block text-sm text-gray-900">
-        x
+        <fa-icon [icon]="faClose"></fa-icon>
       </button>
     </div>
     <div class="py-3 px-4 flex items-center space-x-4">
@@ -64,7 +74,7 @@
       />
       <div class="space-y-1">
         <div>Jese Leos</div>
-        <div class="text-sm text-gray-500">jesse&#64;gmail.com</div>
+        <div class="text-sm text-gray-500">nico&#64;gmail.com</div>
       </div>
     </div>
     <ul class="py-1">
